@@ -1,3 +1,5 @@
+/* the lion ignores the 4 errors 🤫🧏‍♂️ */
+
 @font-face {
   font-family: 'MyCustomFont';
   src: url('fonts/StationStandard.ttf') format('truetype');
@@ -5,12 +7,10 @@
   font-style: normal;
 }
 
-/* Only h1 uses your custom font */
 h1 {
   font-family: 'MyCustomFont', sans-serif;
 }
 
-/* Everything else uses a different font */
 body {
   background: #111;
   color: #eee;
@@ -18,25 +18,37 @@ body {
 }
 
 .container {
-  display: flex;          /* enables flexbox */
-  flex-direction: row;    /* side by side */
-  gap: 20px;              /* space between boxes */
+  display: flex;         
+  flex-direction: row;   
+justify-content: center;
+  gap: 20px;              
 }
 
-/* Mobile: stack vertically */
 @media (max-width: 600px) {
   .container {
-    flex-direction: column; /* stack */
+    flex-direction: column;
   }
 }
 
 .box {
-  flex: 1;                /* make boxes grow equally */
+  flex: 1;                
   padding: 20px;
-  background: #444;
-  color: white;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(10px);
   border-radius: 6px;
   text-align: center;
+  max-width: 900px
+  
+}
+
+.box2 {
+  flex: 1;                
+  padding: 20px;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+  text-align: center;
+  max-width: 600px
 }
 
 details > summary {
@@ -46,32 +58,32 @@ details > summary {
 }
 
 details > summary::-webkit-details-marker {
-  display: none; /* Hide default arrow on some browsers */
+  display: none; 
 }
 
 details[open] > summary::before {
-  content: "▼ "; /* Custom arrow when open */
+  content: "▼ "; 
 }
 
 details > summary::before {
-  content: "▶ "; /* Custom arrow when closed */
+  content: "▶ "; 
 }
 .box img {
-  width: 100%;      /* make image fill the container’s width */
-  height: auto;     /* keep the image’s aspect ratio */
-  display: block;   /* remove tiny bottom whitespace under images */
+  width: 100%;      
+  height: auto;     
+  display: block;   
 }
 
 #intro {
   display: flex;
   align-items: center;      /* vertically center text and image */
-  justify-content: space-between; /* optional: space between */
+  justify-content: center;
   gap: 20px;                /* space between text and image */
   flex-wrap: wrap;          /* allow wrapping on small screens */
 }
 
 #intro-text {
-  flex: 1 1 300px;          /* grow and shrink, min width 300px */
+  flex: 1 1 600px;          /* grow and shrink, min width 300px */
 }
 
 #intro-image {
@@ -81,12 +93,18 @@ details > summary::before {
   height: auto;           /* keep aspect ratio */
 }
 
+#box-image {
+   flex: 0 0 auto;         /* don’t force width */
+  max-width: 200px;       /* max width limit */
+  width: 100%;            /* let it shrink responsively */
+  height: auto; 
+}
 
 /* Responsive: stack vertically on narrow screens */
 @media (max-width: 600px) {
-  #intro {
+   {
     flex-direction: column;
-    align-items: flex-start; /* left align text and image */
+    align-items: center; /* left align text and image */
   }
 
   #intro-image {
@@ -94,4 +112,11 @@ details > summary::before {
     flex: none;
     margin-top: 10px;
   }
+}
+body {
+  background-image: url('images/f40.jpg');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+ background-position: center;
 }
