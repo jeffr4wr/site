@@ -12,7 +12,9 @@
       <p>
         he/they<br />
         i made this website<br />
-       adhd + high function autism
+       adhd + autism (high functioning)
+       <br><span id="time-display"></span>
+
       </p>
       <p>rawr uwu xd</p>
     </div>
@@ -172,7 +174,7 @@
       const now = new Date();
       const hours = now.getHours().toString().padStart(2, "0");
       const minutes = now.getMinutes().toString().padStart(2, "0");
-      document.getElementById("time-display").textContent = `time for me rn: ${hours}:${minutes} (AEST)`;
+      document.getElementById("time-display").textContent = `time for me rn: ${hours}:${minutes} (sydney, australia)`;
     }
 
     updateLocalTime();
