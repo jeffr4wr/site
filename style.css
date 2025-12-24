@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: fonstars;
-  src: url(fonts/passagewaybd.otf);
+  src: url('fonts/passagewaybd.otf');
   font-weight: normal;
   font-style: normal;
 }
